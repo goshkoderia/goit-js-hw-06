@@ -3,13 +3,14 @@ function getRandomHexColor() {
 }
 
 const bodyRef = document.querySelector("body");
-const colorRandomHex = getRandomHexColor();
 const spanColorRef = document.querySelector(".color");
 const butttonRef = document.querySelector(".change-color");
 
 function changeColorBody(){
+  let colorRandomHex = getRandomHexColor();
   bodyRef.style.backgroundColor = colorRandomHex;
   spanColorRef.textContent = colorRandomHex;
+
 };
 
 butttonRef.addEventListener("click", changeColorBody);
